@@ -1,0 +1,26 @@
+<!-- This is an code to change the background color when loading 
+ 
+    Key Takeouts:
+    1. Math.random allows to create decimal points. Use Math.floor to round off
+    2. We can create a Array using new Array
+-->
+
+<html>
+  <head>
+    Exersice One
+  </head>
+  <body>
+    <script>
+      var colors = new Array(
+        "#FFFFFF",
+        "#FF00FF",
+        "#C0C0C0",
+        "#008080",
+        "#000080"
+      );
+
+      document.body.style.background =
+        colors[Math.floor(Math.random() * colors.length)];
+    </script>
+  </body>
+</html>

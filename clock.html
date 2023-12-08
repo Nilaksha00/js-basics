@@ -1,0 +1,34 @@
+<!-- 
+    Clock
+ -->
+
+<html>
+  <head>
+    Exersice Six
+  </head>
+  <body>
+    <p id="time"></p>
+    <button id="btn" onclick="hr_change()">12hrs</button>
+    <script>
+      setInterval(display, 1000);
+      function display() {
+        let x = document.getElementById("btn").innerHTML;
+        var time = new Date().toString().slice(16, 24);
+
+        var AmOrPm = time.slice(0, 2) >= 12 ? "pm" : "am";
+        var hours = time.slice(0, 2) % 12 || 12;
+        x == "12hrs"
+          ? (time = time)
+          : (time = hours + ":" + time.slice(3, 8) + " " + AmOrPm);
+        document.getElementById("time").innerHTML = time;
+      }
+
+      function hr_change() {
+        let x = document.getElementById("btn").innerHTML;
+        x == "24hrs"
+          ? (document.getElementById("btn").innerHTML = "12hrs")
+          : (document.getElementById("btn").innerHTML = "24hrs");
+      }
+    </script>
+  </body>
+</html>

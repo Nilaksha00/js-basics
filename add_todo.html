@@ -1,0 +1,30 @@
+<!-- 
+    Simple Add Todo 
+
+    Key TakeAways:
+
+    To do this we need to create a list item for each input todo. we do not have to add to an array
+ -->
+
+<html>
+  <head>
+    Exercise Two
+  </head>
+  <body>
+    <input type="text" id="new_todo" />
+    <button onclick="AddNew()">Add</button>
+
+    <ul id="todo_list"></ul>
+    <script>
+      function AddNew() {
+        const newTodo = document.getElementById("new_todo").value;
+        const todoList = document.getElementById("todo_list");
+        const item = document.createElement("li");
+
+        item.textContent = newTodo;
+        todoList.appendChild(item);
+        newTodo = "sasa";
+      }
+    </script>
+  </body>
+</html>
