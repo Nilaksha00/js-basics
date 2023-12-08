@@ -1,0 +1,29 @@
+<!-- 
+Sorting an array from scratch
+ -->
+
+<html>
+  <head>
+    Bubble Sort
+  </head>
+  <body>
+    <p id="array"></p>
+    <script>
+      var arr = [9, 6, 7, 1, 5, 3, 8, 4, 2, 6];
+      let i = 0,
+        j = 0;
+      for (j; j <= arr.length; j++) {
+        i = 0;
+        for (i; i < arr.length - 1; i++) {
+          if (arr[i] > arr[i + 1]) {
+            let temp = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = temp;
+          }
+        }
+      }
+
+      document.getElementById("array").innerHTML = arr;
+    </script>
+  </body>
+</html>
