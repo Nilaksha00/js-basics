@@ -4,14 +4,27 @@ Sorting an array from scratch
 
 <html>
   <head>
-    Selection Sort Sort
+    Selection Sort
   </head>
   <body>
     <p id="array"></p>
     <script>
       var arr = [9, 6, 7, 1, 5, 3, 8, 4, 2, 6];
-      let i = 0,
-        j = 0;
+      for (let i = 0; i < arr.length - 1; i++) {
+        var minIndex = i;
+
+        for (let j = i + 1; j < arr.length; j++) {
+          if (arr[j] < arr[minIndex]) {
+            minIndex = j;
+          }
+        }
+
+        if (minIndex !== i) {
+          let temp = arr[i];
+          arr[i] = arr[minIndex];
+          arr[minIndex] = temp;
+        }
+      }
 
       document.getElementById("array").innerHTML = arr;
     </script>
